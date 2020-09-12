@@ -5,6 +5,9 @@ export class Ranges {
 
   public add(range: Range): void {
     this._normalised.push(range);
+  }
+
+  public getNormalised(): Range[] {
     this._normalised.sort((a, b) => a.start - b.start);
 
     let i = 0;
@@ -21,9 +24,6 @@ export class Ranges {
         i++;
       }
     }
-  }
-
-  public getNormalised(): Range[] {
     return this._normalised;
   }
 }
