@@ -1,5 +1,5 @@
 {
-  "name": "@tjenkinson/secret-obfuscator",
+  "name": "secret-obfuscator",
   "version": "0.0.1",
   "description": "Replaces secrets in strings with \"***\".",
   "main": "dist/secret-obfuscator.js",
@@ -34,8 +34,6 @@
   },
   "homepage": "https://github.com/tjenkinson/secret-obfuscator#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^15.0.0",
-    "@rollup/plugin-node-resolve": "^9.0.0",
     "@types/jest": "^26.0.0",
     "husky": "^4.2.5",
     "jest": "^25.5.4",

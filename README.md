@@ -1,30 +1,31 @@
-[![npm version](https://badge.fury.io/js/%40tjenkinson%2Fsecret-obfuscator.svg)](https://badge.fury.io/js/%40tjenkinson%2Fsecret-obfuscator)
+[![npm version](https://badge.fury.io/js/secret-obfuscator.svg)](https://badge.fury.io/js/secret-obfuscator)
 
 # Secret Obfuscator
+
+Replaces secrets in strings with "\*\*\*".
 
 ## Installation
 
 ```sh
-npm install --save @tjenkinson/secret-obfuscator
+npm install --save secret-obfuscator
 ```
 
 or available on JSDelivr at "https://cdn.jsdelivr.net/npm/@tjenkinson/secret-obfuscator@1".
 
-## API
-
-### Constructor
-
-## Example
+## Usage
 
 ```ts
-import { Obfuscaor } from '@tjenkinson/secret-obfuscator';
+import { Obfuscaor } from 'secret-obfuscator';
 
-const obfuscaor = new Obfuscator({ secrets: ['a', 'ba', 'abc'] }
+const obfuscator = new Obfuscator({
+  secrets: ['abc', 'def', 'efg'],
+  replacement: '***', // optional
+});
 
-obfuscaor.obfuscate('This is a secret: a');
+obfuscator.obfuscate('This is a secret: abc');
 // => This is a secret: ***
-obfuscaor.obfuscate('This is a secret: ba');
-// => This is a secret: ***
-obfuscaor.obfuscate('This is a mix of overlapping secrets: aababc');
-// => This is a mix of secrets: ***
+obfuscator.obfuscate('These are some secrets: abc def');
+// => These are some secrets: *** ***
+obfuscator.obfuscate('This is a mix of overlapping secrets: abcdefg');
+// => This is a mix of overlapping secrets: ***
 ```
