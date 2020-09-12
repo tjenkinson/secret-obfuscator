@@ -10,7 +10,7 @@ Replaces secrets in strings with "\*\*\*".
 npm install --save secret-obfuscator
 ```
 
-or available on JSDelivr at "https://cdn.jsdelivr.net/npm/@tjenkinson/secret-obfuscator@1".
+or available on JSDelivr at "https://cdn.jsdelivr.net/npm/secret-obfuscator@1".
 
 ## Usage
 
