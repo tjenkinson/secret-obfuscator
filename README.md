@@ -15,7 +15,7 @@ or available on JSDelivr at "https://cdn.jsdelivr.net/npm/secret-obfuscator@1".
 ## Usage
 
 ```ts
-import { Obfuscaor } from 'secret-obfuscator';
+import { Obfuscator } from 'secret-obfuscator';
 
 const obfuscator = new Obfuscator({
   secrets: ['abc', 'def', 'efg'],
